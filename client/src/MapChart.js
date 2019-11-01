@@ -16,6 +16,8 @@ const colorScale = scaleLinear()
   .domain([0.29, 0.68])
   .range(["#000000", "#ffffff"]);
 
+const colorScale2D = (corruption, investment) => {};
+
 const MapChart = () => {
   const [data, setData] = useState([]);
 
@@ -43,7 +45,7 @@ const MapChart = () => {
                 <Geography
                   key={geo.rsmKey}
                   geography={geo}
-                  fill={d ? colorScale(d["2017"]) : "#F5F4F6"}
+                  fill={d ? colorScale2D(d["1995"], d["2015"]) : "#F5F4F6"}
                 />
               );
             })
