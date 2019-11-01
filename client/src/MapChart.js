@@ -8,15 +8,21 @@ import {
   Sphere,
   Graticule
 } from "react-simple-maps";
+import rgbHex from "rgb-hex";
 
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
+/*
 const colorScale = scaleLinear()
   .domain([0.29, 0.68])
   .range(["#000000", "#ffffff"]);
-
-const colorScale2D = (corruption, investment) => {};
+*/
+const colorScale2D = (corruption, investment) => {
+  const hex = rgbHex(255 * corruption, 0, 255 * investment);
+  console.log(hex);
+  return "#" + hex;
+};
 
 const MapChart = () => {
   const [data, setData] = useState([]);
@@ -45,7 +51,7 @@ const MapChart = () => {
                 <Geography
                   key={geo.rsmKey}
                   geography={geo}
-                  fill={d ? colorScale2D(d["1995"], d["2015"]) : "#F5F4F6"}
+                  fill={d ? colorScale2D(d["1995"], d["2017"]) : "#F5F4F6"}
                 />
               );
             })
