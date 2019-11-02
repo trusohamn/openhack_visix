@@ -16,11 +16,6 @@ import Legend2d from "./Legend2d";
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
-/*
-const colorScale = scaleLinear()
-  .domain([0.29, 0.68])
-  .range(["#000000", "#ffffff"]);
-*/
 const colorScale2D = (corruption, investment) => {
   const hex = rgbHex(100 + 155 * corruption, 0, 100 + 155 * investment);
   return "#" + hex;
@@ -30,7 +25,7 @@ const MapChart = ({ setTooltipContent, dataset, country, setCountry }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    csv(`${process.env.PUBLIC_URL}/${dataset}`).then(data => {
+    csv(`${process.env.PUBLIC_URL}/data/${dataset}`).then(data => {
       setData(data);
     });
   }, [dataset]);
