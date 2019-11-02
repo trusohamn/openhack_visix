@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "76f23a462d5fbcb50fcef1b6988976c5",
+    "revision": "1e2b3b705d4f7b4eadbbb9593364cfaa",
     "url": "/openhack_visix/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/openhack_visix/static/css/2.b0bb7f2c.chunk.css"
   },
   {
-    "revision": "43cd9ded9a2a6fe380bf",
+    "revision": "d2001cda7af7ef47f25b",
     "url": "/openhack_visix/static/css/main.ec753286.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/openhack_visix/static/js/2.a61dd879.chunk.js"
   },
   {
-    "revision": "43cd9ded9a2a6fe380bf",
-    "url": "/openhack_visix/static/js/main.7d5f1b6f.chunk.js"
+    "revision": "d2001cda7af7ef47f25b",
+    "url": "/openhack_visix/static/js/main.8dbab73e.chunk.js"
   },
   {
     "revision": "2672ff0d41a4c417ec81",
