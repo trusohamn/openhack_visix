@@ -2,3 +2,11 @@
   font-family: sans-serif;
   text-align: center;
 }
+.MapChart {
+  
+}
+
+body {
+  width: 80vw;
+  background: rgb(65, 64, 64);
+}
