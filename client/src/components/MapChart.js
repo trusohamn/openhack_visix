@@ -17,6 +17,7 @@ const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
 const colorScale2D = (corruption, investment) => {
+  console.log(100 + 155 * corruption, 0, 100 + 155 * investment)
   const hex = rgbHex(100 + 155 * corruption, 0, 100 + 155 * investment);
   return "#" + hex;
 };
@@ -30,9 +31,13 @@ const MapChart = ({
   setData
 }) => {
   useEffect(() => {
-    console.log('setting data!!!!')
+    console.log(dataset)
     csv(`${process.env.PUBLIC_URL}/data/${dataset}`).then(data => {
-      setData(data);
+      const maxFunding = Math.max(...data.map(country => country['Funding USDm']))
+      data.forEach(country => {
+        country.investment = country['Funding USDm'] / maxFunding
+      })
+      return setData(data);
     });
   }, [dataset]);
 
@@ -47,20 +52,20 @@ const MapChart = ({
         }}
       >
         <ZoomableGroup disablePanning={true}>
-          <Sphere stroke="#E4E5E6" strokeWidth={0.5} />
-          <Graticule stroke="#E4E5E6" strokeWidth={0.5} />
+          <Sphere stroke="#E4E5E6" strokeWidth={0.3} />
+          <Graticule stroke="#E4E5E6" strokeWidth={0.3} />
           {data.length > 0 && (
             <Geographies geography={geoUrl}>
               {({ geographies }) =>
                 geographies.map(geo => {
-                  const d = data.find(s => s.ISO3 === geo.properties.ISO_A3);
+                  const d = data.find(s => s['CountryCode'] === geo.properties.ISO_A3);
                   return (
                     <Geography
                       key={geo.rsmKey}
                       geography={geo}
                       fill={
                         d
-                          ? colorScale2D(d["corruption"], d["investment"])
+                          ? colorScale2D(d["Corruption risks"], d["investment"])
                           : "#F5F4F6"
                       }
                       onClick={() => {
