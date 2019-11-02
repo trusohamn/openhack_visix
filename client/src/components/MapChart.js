@@ -82,8 +82,10 @@ const MapChart = ({
                         setTooltipContent(
                           <Tooltip
                             name={geo.properties.NAME}
-                            data1="0.4"
-                            data2="0.3"
+                            corruption={
+                              d ? Number(d["Corruption risks"]) : "none"
+                            }
+                            investment={d ? Number(d["investment"]) : "none"}
                           />
                         );
                       }}
@@ -91,7 +93,7 @@ const MapChart = ({
                         setTooltipContent("");
                       }}
                       style={{
-                        default: {               
+                        default: {
                           outline: "none"
                         },
                         hover: {
