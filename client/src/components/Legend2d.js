@@ -20,6 +20,7 @@ const SVG = ({
     <defs>
       <marker
         id="arrow"
+        fill="white"
         viewBox="0 0 10 10"
         refX="5"
         refY="5"
@@ -59,20 +60,29 @@ const SVG = ({
       <polyline
         points="-0.2,-0.4, -0.2,5.1, 5.3,5.1"
         fill="none"
-        stroke="black"
+        stroke="white"
         stroke-width="0.1"
         marker-start="url(#arrow)"
         marker-end="url(#arrow)"
       />
-      <text x="2.5" y="6" font-size="0.06em" text-anchor="middle">
+      <text
+        x="2.5"
+        y="6"
+        font-size="0.06em"
+        text-anchor="middle"
+        fill="white"
+        font-weight="bold"
+      >
         Corruption
       </text>
       <text
         transform=" rotate(90 0 0)"
+        fill="white"
         x="2.5"
         y="1"
         font-size="0.06em"
         text-anchor="middle"
+        font-weight="bold"
       >
         Investment
       </text>
