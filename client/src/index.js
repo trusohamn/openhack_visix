@@ -15,8 +15,10 @@ function App() {
         <Tab eventKey="education" title="Education"></Tab>
         <Tab eventKey="health" title="Health"></Tab>
       </Tabs>
-      <MapChart setTooltipContent={setContent} />
-      <ReactTooltip>{content}</ReactTooltip>
+      <div class="page">
+        <MapChart setTooltipContent={setContent} />
+        <ReactTooltip>{content}</ReactTooltip>
+      </div>
     </div>
   );
 }
