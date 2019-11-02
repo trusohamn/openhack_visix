@@ -28,7 +28,7 @@ const MapChart = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    csv(`/vulnerability.csv`).then(data => {
+    csv(`/corruption.csv`).then(data => {
       setData(data);
     });
   }, []);
@@ -51,7 +51,11 @@ const MapChart = () => {
                 <Geography
                   key={geo.rsmKey}
                   geography={geo}
-                  fill={d ? colorScale2D(d["1995"], d["2017"]) : "#F5F4F6"}
+                  fill={
+                    d
+                      ? colorScale2D(d["corruption"], d["investment"])
+                      : "#F5F4F6"
+                  }
                 />
               );
             })
