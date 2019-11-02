@@ -17,9 +17,23 @@ import Tooltip from "./Tooltip";
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
+// const colorScale2D = (corruption, investment) => {
+//   console.log(100 + 155 * corruption, 0, 100 + 155 * investment);
+//   const hex = rgbHex(100 + 155 * corruption, 0, 100 + 155 * investment);
+//   return "#" + hex;
+// };
+
+const fillFunction = (corruption, investment) => {
+  console.log("in fillFunctin", corruption, investment);
+  return [255 * corruption, 255 - 255 * investment, 255];
+};
+
 const colorScale2D = (corruption, investment) => {
-  console.log(100 + 155 * corruption, 0, 100 + 155 * investment);
-  const hex = rgbHex(100 + 155 * corruption, 0, 100 + 155 * investment);
+  const fill_values = fillFunction(corruption, investment);
+
+  console.log(corruption, investment, fill_values);
+  const hex = rgbHex(fill_values[0], fill_values[1], fill_values[2]);
+  //const hex = rgbHex(255 * corruption, 255 * investment, 255);
   return "#" + hex;
 };
 
@@ -112,7 +126,7 @@ const MapChart = ({
             </Geographies>
           )}
           <Marker coordinates={[-150.006, -10.7128]}>
-            <Legend2d width={120} />
+            <Legend2d width={120} fillFunction={colorScale2D} />
           </Marker>
         </ZoomableGroup>
       </ComposableMap>
