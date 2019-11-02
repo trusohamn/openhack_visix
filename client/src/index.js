@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
 import MapChart from "./components/MapChart";
 import Details from "./components/Details";
+import Stats from "./components/Stats";
 
 import { Tabs, Tab } from "react-bootstrap";
 const upperFirst = string =>
@@ -13,30 +14,37 @@ function App() {
   const [content, setContent] = useState("");
   const [key, setKey] = useState("public");
   const [country, setCountry] = useState("");
+  const [data, setData] = useState([]);
+
 
   const sectors = ["public", "education", "health"];
   return (
     <div>
       <div className="page">
-        <Tabs
-          id="controlled-tab-example"
-          activeKey={key}
-          onSelect={k => setKey(k)}
-        >
-          {sectors.map(sector => (
-            <Tab
-              key={sector}
-              eventKey={sector}
-              title={upperFirst(sector)}
-            ></Tab>
-          ))}
-        </Tabs>
+        <div className="Tabs">
+          <Tabs
+            id="controlled-tab-example"
+            activeKey={key}
+            onSelect={k => setKey(k)}
+          >
+            {sectors.map(sector => (
+              <Tab
+                key={sector}
+                eventKey={sector}
+                title={upperFirst(sector)}
+              ></Tab>
+            ))}
+          </Tabs>
+        </div>
         <MapChart
           setTooltipContent={setContent}
           dataset={key + ".csv"}
           country={country}
           setCountry={setCountry}
+          data={data}
+          setData={setData}
         />
+        <Stats country={country} data={data}></Stats>
         <ReactTooltip>{content}</ReactTooltip>
         <Details country={country} />
       </div>
