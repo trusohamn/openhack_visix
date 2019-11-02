@@ -7,9 +7,11 @@ import {
   Geographies,
   Geography,
   Sphere,
-  Graticule
+  Graticule,
+  Marker
 } from "react-simple-maps";
 import rgbHex from "rgb-hex";
+import Legend2d from "./Legend2d";
 
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
@@ -88,6 +90,9 @@ const MapChart = ({ setTooltipContent, dataset }) => {
             }
           </Geographies>
         )}
+        <Marker coordinates={[-150.006, -10.7128]}>
+          <Legend2d width={120} />
+        </Marker>
       </ZoomableGroup>
     </ComposableMap>
   );
