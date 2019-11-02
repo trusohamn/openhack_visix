@@ -26,7 +26,7 @@ const SVG = ({
           height={0.95 * scale}
           fill={
             fillFunction
-              ? fillFunction(x / 4, y / 4)
+              ? fillFunction(x / 4, 1 - y / 4)
               : rgb(100 + (x / 4) * 155, 0, 255 - (y / 4) * 155)
           }
           x={x * scale}

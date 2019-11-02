@@ -25,7 +25,7 @@ const geoUrl =
 
 const fillFunction = (corruption, investment) => {
   console.log("in fillFunctin", corruption, investment);
-  return { R: 255 * corruption, G: 255 - 255 * investment, B: 255 };
+  return { R: 255 * corruption, G: 0, B: 255 * investment };
 };
 
 const colorScale2D = (corruption, investment) => {
