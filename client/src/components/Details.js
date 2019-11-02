@@ -6,8 +6,8 @@ export default ({ country }) => {
   }, [country]);
 
   return (
-    <div className="Details">
-      <h1>{country}</h1>
+    <div className="content Details">
+      <h3>{country}</h3>
     </div>
   );
 };
