@@ -109,7 +109,8 @@ const MapChart = ({
                         },
                         hover: {
                           fill: "#F53",
-                          outline: "none"
+                          outline: "none",
+                          cursor: "pointer"
                         },
                         pressed: {
                           fill: "#E42",
