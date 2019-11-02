@@ -19,8 +19,7 @@ const colorScale = scaleLinear()
   .range(["#000000", "#ffffff"]);
 */
 const colorScale2D = (corruption, investment) => {
-  const hex = rgbHex(255 * corruption, 0, 255 * investment);
-  console.log(hex);
+  const hex = rgbHex(100 + 155 * corruption, 0, 100 + 155 * investment);
   return "#" + hex;
 };
 
@@ -56,6 +55,9 @@ const MapChart = () => {
                       ? colorScale2D(d["corruption"], d["investment"])
                       : "#F5F4F6"
                   }
+                  onClick={() => {
+                    console.log(geo.rsmKey);
+                  }}
                 />
               );
             })
