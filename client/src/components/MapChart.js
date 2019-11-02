@@ -56,7 +56,7 @@ const MapChart = () => {
                       : "#F5F4F6"
                   }
                   onClick={() => {
-                    console.log(geo.rsmKey);
+                    console.log(geo.properties.ABBREV);
                   }}
                 />
               );
