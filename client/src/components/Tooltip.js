@@ -1,12 +1,15 @@
 import React, { ReactDOM } from "react";
 import { PieChart, Pie, Sector, Cell } from "recharts";
 
-const COLORS1 = ["rgb(255,0,0)", "rgb(100,100,100)"];
-const COLORS2 = ["rgb(0,0,255)", "rgb(100,100,100)"];
-
 const RADIAN = Math.PI / 180;
 
-const DataTooltip = ({ name, corruption, investment }) => {
+const DataTooltip = ({
+  name,
+  corruption,
+  investment,
+  corruption_color,
+  investment_color
+}) => {
   const data_corruption = [
     { name: "Group A", value: corruption },
     { name: "inverse", value: 1 - corruption }
@@ -16,6 +19,9 @@ const DataTooltip = ({ name, corruption, investment }) => {
     { name: "Group A", value: investment },
     { name: "inverse", value: 1 - investment }
   ];
+
+  const COLORS1 = [corruption_color, "rgb(100,100,100)"];
+  const COLORS2 = [investment_color, "rgb(100,100,100)"];
 
   console.log(data_corruption);
 

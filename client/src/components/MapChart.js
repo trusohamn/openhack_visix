@@ -149,6 +149,8 @@ const MapChart = ({
                               d ? Number(d["Corruption risks"]) : "none"
                             }
                             investment={d ? Number(d["investment"]) : "none"}
+                            corruption_color="rgb(255, 0 , 177.5)"
+                            investment_color="rgb(0, 255 , 177.5)"
                           />
                         );
                       }}
