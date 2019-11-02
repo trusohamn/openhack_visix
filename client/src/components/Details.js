@@ -7,7 +7,7 @@ export default ({ country }) => {
 
   return (
     <div className="Details">
-      <h1>{country}</h1>
+      <h3>{country}</h3>
     </div>
   );
 };

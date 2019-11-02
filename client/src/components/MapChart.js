@@ -30,7 +30,7 @@ const MapChart = ({ setTooltipContent, dataset, country, setCountry }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    csv(`/${dataset}`).then(data => {
+    csv(`${process.env.PUBLIC_URL}/${dataset}`).then(data => {
       setData(data);
     });
   }, [dataset]);
