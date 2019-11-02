@@ -1,8 +1,6 @@
 import React, { ReactDOM } from "react";
 import { PieChart, Pie, Sector, Cell } from "recharts";
 
-const RADIAN = Math.PI / 180;
-
 const DataTooltip = ({
   name,
   corruption,

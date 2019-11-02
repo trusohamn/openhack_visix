@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { csv } from "d3-fetch";
-// import { scaleLinear } from "d3-scale";
+
 import {
   ZoomableGroup,
   ComposableMap,
@@ -17,35 +17,6 @@ import Tooltip from "./Tooltip";
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
-// const colorScale2D = (corruption, investment) => {
-//   console.log(100 + 155 * corruption, 0, 100 + 155 * investment);
-//   const hex = rgbHex(100 + 155 * corruption, 0, 100 + 155 * investment);
-//   return "#" + hex;
-// };
-
-// const fillFunction = (corruption, investment) => {
-//   console.log("in fillFunctin", corruption, investment);
-//   return { R: 255 * corruption, G: 0, B: 255 * investment };
-// };
-
-// const fillFunction = (corruption, investment) => {
-//   return {
-//     R: 255 * Number(corruption),
-//     G: (155 * (Number(corruption) + Number(investment))) / 2 + 100,
-//     B: 255 * Number(investment)
-//   };
-// };
-
-// Nice white nothing, yellow corruption, blue investment, green both
-// const fillFunction = (corruption, investment) => {
-//   console.log("in fillFunctin", corruption, investment);
-//   return {
-//     R: 255 - 255 * Number(investment),
-//     G: 255 - (155 * (Number(corruption) + Number(investment))) / 2,
-//     B: 255 - 255 * Number(corruption)
-//   };
-// };
-
 // Green investment, pink corruption, blue both <- best one so far
 const fillFunction = (corruption, investment) => {
   console.log("in fillFunctin", corruption, investment);
@@ -56,32 +27,11 @@ const fillFunction = (corruption, investment) => {
   };
 };
 
-// Green investment, magenta corruption, red both
-// const fillFunction = (corruption, investment) => {
-//   console.log("in fillFunctin", corruption, investment);
-//   return {
-//     B: 255 - 255 * Number(investment),
-//     R: 255 - (155 * (Number(corruption) + Number(investment))) / 2,
-//     G: 255 - 255 * Number(corruption)
-//   };
-// };
-
-// const fillFunction = (corruption, investment) => {
-//   console.log("in fillFunctin", corruption, investment);
-//   return {
-//     G: 255 - 255 * Number(corruption),
-//     B: 255 - (55 * (Number(corruption) + Number(investment))) / 2,
-//     R: 255 - 255 * Number(investment)
-//   };
-// };
-
 const colorScale2D = (corruption, investment) => {
   const color = fillFunction(corruption, investment);
 
   console.log(corruption, investment, color);
   const hex = rgbHex(color["R"], color["G"], color["B"]);
-  //const hex = rgbHex(255 * corruption, 255 * investment, 255);
-  //return "#" + hex;
 
   return `rgb(${color["R"]}, ${color["G"]} , ${color["B"]})`;
 };
