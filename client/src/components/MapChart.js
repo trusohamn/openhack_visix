@@ -18,7 +18,6 @@ const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
 const colorScale2D = (corruption, investment) => {
-  console.log(100 + 155 * corruption, 0, 100 + 155 * investment);
   const hex = rgbHex(100 + 155 * corruption, 0, 100 + 155 * investment);
   return "#" + hex;
 };
@@ -32,7 +31,6 @@ const MapChart = ({
   setData
 }) => {
   useEffect(() => {
-    console.log(dataset);
     csv(`${process.env.PUBLIC_URL}/data/${dataset}`).then(data => {
       const maxFunding = Math.max(
         ...data.map(country => country["Funding USDm"])
@@ -40,6 +38,7 @@ const MapChart = ({
       data.forEach(country => {
         country.investment = country["Funding USDm"] / maxFunding;
       });
+      console.log(data);
       return setData(data);
     });
   }, [dataset]);
@@ -48,7 +47,7 @@ const MapChart = ({
     <div className="Map">
       <ComposableMap
         data-tip=""
-        height={450}
+        height={400}
         projectionConfig={{
           rotate: [0, 0, 0],
           scale: 140
