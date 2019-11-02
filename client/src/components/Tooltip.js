@@ -34,7 +34,7 @@ const DataTooltip = ({
     >
       <div style={{ display: "flex", justifyContent: "center" }}>{name}</div>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <PieChart width={100} height={50}>
+        <PieChart width={93} height={50}>
           <Pie
             data={data_corruption}
             cx={16}
@@ -54,7 +54,7 @@ const DataTooltip = ({
 
           <Pie
             data={data_investment}
-            cx={56}
+            cx={66}
             cy={16}
             innerRadius={15}
             outerRadius={20}
@@ -65,7 +65,7 @@ const DataTooltip = ({
               <Cell fill={COLORS2[index % COLORS2.length]} stroke="black" />
             ))}
           </Pie>
-          <text x={61} y={17} dy={8} textAnchor="middle" fill="White">
+          <text x={71} y={17} dy={8} textAnchor="middle" fill="White">
             {Number(investment).toFixed(2)}
           </text>
         </PieChart>
