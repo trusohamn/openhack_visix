@@ -14,7 +14,7 @@ export default ({ countryCode, data }) => {
             .map(key => (
               <tr>
                 <td>{key}</td>
-                <td>{countryData[key]}</td>
+                <td>{Number(countryData[key]).toFixed(2)}</td>
               </tr>
             ))}
         </table>
