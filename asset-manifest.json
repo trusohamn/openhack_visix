@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/openhack_visix/static/css/main.9b1431d8.chunk.css",
+    "main.js": "/openhack_visix/static/js/main.366f75b4.chunk.js",
+    "main.js.map": "/openhack_visix/static/js/main.366f75b4.chunk.js.map",
+    "runtime-main.js": "/openhack_visix/static/js/runtime-main.c9165b19.js",
+    "runtime-main.js.map": "/openhack_visix/static/js/runtime-main.c9165b19.js.map",
+    "static/js/2.29272b3e.chunk.js": "/openhack_visix/static/js/2.29272b3e.chunk.js",
+    "static/js/2.29272b3e.chunk.js.map": "/openhack_visix/static/js/2.29272b3e.chunk.js.map",
+    "index.html": "/openhack_visix/index.html",
+    "precache-manifest.6cb4f7133629e8d3338ef88d84573a6f.js": "/openhack_visix/precache-manifest.6cb4f7133629e8d3338ef88d84573a6f.js",
+    "service-worker.js": "/openhack_visix/service-worker.js",
+    "static/css/main.9b1431d8.chunk.css.map": "/openhack_visix/static/css/main.9b1431d8.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c9165b19.js",
+    "static/js/2.29272b3e.chunk.js",
+    "static/css/main.9b1431d8.chunk.css",
+    "static/js/main.366f75b4.chunk.js"
+  ]
+}
