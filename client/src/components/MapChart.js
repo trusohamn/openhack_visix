@@ -12,6 +12,7 @@ import {
 } from "react-simple-maps";
 import rgbHex from "rgb-hex";
 import Legend2d from "./Legend2d";
+import Tooltip from "./Tooltip";
 
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
@@ -66,7 +67,13 @@ const MapChart = ({ setTooltipContent, dataset, country, setCountry }) => {
                       console.log(geo.properties.ISO_A3);
                     }}
                     onMouseEnter={() => {
-                      setTooltipContent(geo.properties.NAME);
+                      setTooltipContent(
+                        <Tooltip
+                          name={geo.properties.NAME}
+                          data1="0.4"
+                          data2="0.3"
+                        />
+                      );
                     }}
                     onMouseLeave={() => {
                       setTooltipContent("");

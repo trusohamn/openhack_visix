@@ -1,14 +1,14 @@
 .Details {
   margin: 0px auto;
   width: 80%;
-  background: rgb(235, 235, 235); 
+  background: rgb(235, 235, 235);
   border-radius: 5px;
-  padding: 10px
+  padding: 10px;
 }
 
 .page {
   background: rgb(109, 107, 107);
-  height: 100vh
+  height: 100vh;
 }
 
 body {
@@ -26,4 +26,13 @@ a {
   background: rgb(65, 64, 64);
 }
 
+.__react_component_tooltip {
+  padding: 4px 4px;
+  font-size: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
 
+#dataTooltip {
+}
