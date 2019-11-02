@@ -34,6 +34,7 @@ const colorScale2D = (corruption, investment) => {
   console.log(corruption, investment, color);
   const hex = rgbHex(color["R"], color["G"], color["B"]);
   //const hex = rgbHex(255 * corruption, 255 * investment, 255);
+
   return "#" + hex;
 };
 
