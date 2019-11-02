@@ -32,46 +32,172 @@ const SVG = ({
       </marker>
     </defs>
     <g id="group" transform=" rotate(-45 5 0)">
-      <rect width="0.95" height="0.95" fill="rgb(0,0,255)" x="0" y="0" />
-      <rect width="0.95" height="0.95" fill="rgb(0,0,204)" x="0" y="1" />
-      <rect width="0.95" height="0.95" fill="rgb(0,0,153)" x="0" y="2" />
-      <rect width="0.95" height="0.95" fill="rgb(0,0,102)" x="0" y="3" />
-      <rect width="0.95" height="0.95" fill="rgb(0,0,51)" x="0" y="4" />
-      <rect width="0.95" height="0.95" fill="rgb(51,0,255)" x="1" y="0" />
-      <rect width="0.95" height="0.95" fill="rgb(51,0,204)" x="1" y="1" />
-      <rect width="0.95" height="0.95" fill="rgb(51,0,153)" x="1" y="2" />
-      <rect width="0.95" height="0.95" fill="rgb(51,0,102)" x="1" y="3" />
-      <rect width="0.95" height="0.95" fill="rgb(51,0,51)" x="1" y="4" />
-      <rect width="0.95" height="0.95" fill="rgb(102,0,255)" x="2" y="0" />
-      <rect width="0.95" height="0.95" fill="rgb(102,0,204)" x="2" y="1" />
-      <rect width="0.95" height="0.95" fill="rgb(102,0,153)" x="2" y="2" />
-      <rect width="0.95" height="0.95" fill="rgb(102,0,102)" x="2" y="3" />
-      <rect width="0.95" height="0.95" fill="rgb(102,0,51)" x="2" y="4" />
-      <rect width="0.95" height="0.95" fill="rgb(153,0,255)" x="3" y="0" />
-      <rect width="0.95" height="0.95" fill="rgb(153,0,204)" x="3" y="1" />
-      <rect width="0.95" height="0.95" fill="rgb(153,0,153)" x="3" y="2" />
-      <rect width="0.95" height="0.95" fill="rgb(153,0,102)" x="3" y="3" />
-      <rect width="0.95" height="0.95" fill="rgb(153,0,51)" x="3" y="4" />
-      <rect width="0.95" height="0.95" fill="rgb(204,0,255)" x="4" y="0" />
-      <rect width="0.95" height="0.95" fill="rgb(204,0,204)" x="4" y="1" />
-      <rect width="0.95" height="0.95" fill="rgb(204,0,153)" x="4" y="2" />
-      <rect width="0.95" height="0.95" fill="rgb(204,0,102)" x="4" y="3" />
-      <rect width="0.95" height="0.95" fill="rgb(204,0,51)" x="4" y="4" />
+      <rect width="0.95" height="0.95" fill="rgb(100,0,255)" x="0" y="0"></rect>
+      <rect
+        width="0.95"
+        height="0.95"
+        fill="rgb(100,0,216.25)"
+        x="0"
+        y="1"
+      ></rect>
+      <rect
+        width="0.95"
+        height="0.95"
+        fill="rgb(100,0,177.5)"
+        x="0"
+        y="2"
+      ></rect>
+      <rect
+        width="0.95"
+        height="0.95"
+        fill="rgb(100,0,138.75)"
+        x="0"
+        y="3"
+      ></rect>
+      <rect width="0.95" height="0.95" fill="rgb(100,0,100)" x="0" y="4"></rect>
+      <rect
+        width="0.95"
+        height="0.95"
+        fill="rgb(138.75,0,255)"
+        x="1"
+        y="0"
+      ></rect>
+      <rect
+        width="0.95"
+        height="0.95"
+        fill="rgb(138.75,0,216.25)"
+        x="1"
+        y="1"
+      ></rect>
+      <rect
+        width="0.95"
+        height="0.95"
+        fill="rgb(138.75,0,177.5)"
+        x="1"
+        y="2"
+      ></rect>
+      <rect
+        width="0.95"
+        height="0.95"
+        fill="rgb(138.75,0,138.75)"
+        x="1"
+        y="3"
+      ></rect>
+      <rect
+        width="0.95"
+        height="0.95"
+        fill="rgb(138.75,0,100)"
+        x="1"
+        y="4"
+      ></rect>
+      <rect
+        width="0.95"
+        height="0.95"
+        fill="rgb(177.5,0,255)"
+        x="2"
+        y="0"
+      ></rect>
+      <rect
+        width="0.95"
+        height="0.95"
+        fill="rgb(177.5,0,216.25)"
+        x="2"
+        y="1"
+      ></rect>
+      <rect
+        width="0.95"
+        height="0.95"
+        fill="rgb(177.5,0,177.5)"
+        x="2"
+        y="2"
+      ></rect>
+      <rect
+        width="0.95"
+        height="0.95"
+        fill="rgb(177.5,0,138.75)"
+        x="2"
+        y="3"
+      ></rect>
+      <rect
+        width="0.95"
+        height="0.95"
+        fill="rgb(177.5,0,100)"
+        x="2"
+        y="4"
+      ></rect>
+      <rect
+        width="0.95"
+        height="0.95"
+        fill="rgb(216.25,0,255)"
+        x="3"
+        y="0"
+      ></rect>
+      <rect
+        width="0.95"
+        height="0.95"
+        fill="rgb(216.25,0,216.25)"
+        x="3"
+        y="1"
+      ></rect>
+      <rect
+        width="0.95"
+        height="0.95"
+        fill="rgb(216.25,0,177.5)"
+        x="3"
+        y="2"
+      ></rect>
+      <rect
+        width="0.95"
+        height="0.95"
+        fill="rgb(216.25,0,138.75)"
+        x="3"
+        y="3"
+      ></rect>
+      <rect
+        width="0.95"
+        height="0.95"
+        fill="rgb(216.25,0,100)"
+        x="3"
+        y="4"
+      ></rect>
+      <rect width="0.95" height="0.95" fill="rgb(255,0,255)" x="4" y="0"></rect>
+      <rect
+        width="0.95"
+        height="0.95"
+        fill="rgb(255,0,216.25)"
+        x="4"
+        y="1"
+      ></rect>
+      <rect
+        width="0.95"
+        height="0.95"
+        fill="rgb(255,0,177.5)"
+        x="4"
+        y="2"
+      ></rect>
+      <rect
+        width="0.95"
+        height="0.95"
+        fill="rgb(255,0,138.75)"
+        x="4"
+        y="3"
+      ></rect>
+      <rect width="0.95" height="0.95" fill="rgb(255,0,100)" x="4" y="4"></rect>
       <polyline
         points="-0.2,-0.4, -0.2,5.1, 5.3,5.1"
         fill="none"
         stroke="white"
-        stroke-width="0.1"
-        marker-start="url(#arrow)"
-        marker-end="url(#arrow)"
+        strokeWidth="0.1"
+        markerStart="url(#arrow)"
+        markerEnd="url(#arrow)"
       />
       <text
         x="2.5"
         y="6"
-        font-size="0.06em"
-        text-anchor="middle"
+        fontSize="0.06em"
+        textAnchor="middle"
         fill="white"
-        font-weight="bold"
+        fontWeight="bold"
       >
         Corruption
       </text>
@@ -80,9 +206,9 @@ const SVG = ({
         fill="white"
         x="2.5"
         y="1"
-        font-size="0.06em"
-        text-anchor="middle"
-        font-weight="bold"
+        fontSize="0.06em"
+        textAnchor="middle"
+        fontWeight="bold"
       >
         Investment
       </text>
