@@ -4,6 +4,8 @@ import ReactTooltip from "react-tooltip";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
 import MapChart from "./components/MapChart";
+import Details from "./components/Details";
+
 import { Tabs, Tab } from "react-bootstrap";
 const upperFirst = string =>
   string.charAt(0).toUpperCase() + string.substring(1);
@@ -30,6 +32,7 @@ function App() {
         </Tabs>
         <MapChart setTooltipContent={setContent} dataset={key + ".csv"} />
         <ReactTooltip>{content}</ReactTooltip>
+        <Details/>
       </div>
     </div>
   );
