@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 
-const SingleStat = ({ data, label }) => {
+const SingleStat = ({ data, label, displayDetails }) => {
   const name = "Country Name";
   return (
     <div className="SingleStat">
@@ -14,7 +14,7 @@ const SingleStat = ({ data, label }) => {
   );
 };
 
-export default ({ data }) => {
+export default ({ data, displayDetails }) => {
   const corruption = "Corruption risks";
 
   const mostCorrupted = data

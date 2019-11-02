@@ -1,6 +1,6 @@
 import React from "react";
 
-const removeKeys = ["CountryCode", "Country Name"];
+const removeKeys = ["CountryCode", "Country Name", "investment"];
 
 export default ({ countryCode, data }) => {
   const countryData = data.find(country => country.CountryCode === countryCode);

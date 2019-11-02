@@ -43,7 +43,13 @@ function App() {
           data={data}
           setData={setData}
         />
-        <Stats country={country} data={data}></Stats>
+        <Stats
+          country={country}
+          data={data}
+          displayDetails={countryCode => {
+            setCountry(countryCode);
+          }}
+        ></Stats>
         <ReactTooltip>{content}</ReactTooltip>
         <Details countryCode={country} data={data} />
       </div>
