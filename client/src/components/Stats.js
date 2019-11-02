@@ -7,7 +7,16 @@ const SingleStat = ({ data, label, displayDetails }) => {
       <h5>{label}</h5>
       <ul>
         {data.map(country => (
-          <li>{country[name]}</li>
+          <li
+            onClick={() =>
+              displayDetails(
+                data.find(countryData => countryData[name] === country[name])
+                  .CountryCode
+              )
+            }
+          >
+            {country[name]}
+          </li>
         ))}
       </ul>
     </div>
@@ -29,9 +38,21 @@ export default ({ data, displayDetails }) => {
 
   return (
     <div className="content Stats">
-      <SingleStat data={mostCorrupted} label="Highest corruption" />
-      <SingleStat data={mostInvested} label="Highest investment" />
-      <SingleStat data={lessInvested} label="Lowest investment" />
+      <SingleStat
+        displayDetails={displayDetails}
+        data={mostCorrupted}
+        label="Highest corruption"
+      />
+      <SingleStat
+        displayDetails={displayDetails}
+        data={mostInvested}
+        label="Highest investment"
+      />
+      <SingleStat
+        displayDetails={displayDetails}
+        data={lessInvested}
+        label="Lowest investment"
+      />
     </div>
   );
 };
