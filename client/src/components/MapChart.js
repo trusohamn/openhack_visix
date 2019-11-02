@@ -72,13 +72,16 @@ const MapChart = ({ setTooltipContent }) => {
                       console.log(geo.properties.ABBREV);
                     }}
                     onMouseEnter={() => {
-                      const { NAME, POP_EST } = geo.properties;
-                      setTooltipContent(`${NAME} — ${rounded(POP_EST)}`);
+                      const { NAME } = geo.properties;
+                      setTooltipContent(`${NAME}`);
                     }}
                     onMouseLeave={() => {
                       setTooltipContent("");
                     }}
                     style={{
+                      default: {
+                        outline: "none"
+                      },
                       hover: {
                         fill: "#F53",
                         outline: "none"
