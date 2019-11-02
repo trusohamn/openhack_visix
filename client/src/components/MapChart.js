@@ -54,8 +54,12 @@ const MapChart = ({
     });
   }, [dataset]);
 
+  const handleClick = e => {
+    if (e.target.className.baseVal !== "rsm-geography ") setCountry(null);
+  };
+
   return (
-    <div className="Map">
+    <div className="Map" onClick={handleClick}>
       <ComposableMap
         data-tip=""
         height={400}
