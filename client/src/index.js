@@ -12,6 +12,7 @@ const upperFirst = string =>
 function App() {
   const [content, setContent] = useState("");
   const [key, setKey] = useState("public");
+  const [country, setCountry] = useState("");
 
   const sectors = ["public", "education", "health"];
   return (
@@ -30,9 +31,14 @@ function App() {
             ></Tab>
           ))}
         </Tabs>
-        <MapChart setTooltipContent={setContent} dataset={key + ".csv"} />
+        <MapChart
+          setTooltipContent={setContent}
+          dataset={key + ".csv"}
+          country={country}
+          setCountry={setCountry}
+        />
         <ReactTooltip>{content}</ReactTooltip>
-        <Details/>
+        <Details country={country} />
       </div>
     </div>
   );

@@ -26,7 +26,7 @@ const colorScale2D = (corruption, investment) => {
   return "#" + hex;
 };
 
-const MapChart = ({ setTooltipContent, dataset }) => {
+const MapChart = ({ setTooltipContent, dataset, country, setCountry }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -44,7 +44,7 @@ const MapChart = ({ setTooltipContent, dataset }) => {
         scale: 140
       }}
     >
-      <ZoomableGroup disablePanning={true} >
+      <ZoomableGroup disablePanning={true}>
         <Sphere stroke="#E4E5E6" strokeWidth={0.5} />
         <Graticule stroke="#E4E5E6" strokeWidth={0.5} />
         {data.length > 0 && (
@@ -62,11 +62,11 @@ const MapChart = ({ setTooltipContent, dataset }) => {
                         : "#F5F4F6"
                     }
                     onClick={() => {
-                      console.log(geo.properties.ABBREV);
+                      setCountry(geo.properties.ISO_A3);
+                      console.log(geo.properties.ISO_A3);
                     }}
                     onMouseEnter={() => {
-                      const { NAME } = geo.properties;
-                      setTooltipContent(`${NAME}`);
+                      setTooltipContent(geo.properties.NAME);
                     }}
                     onMouseLeave={() => {
                       setTooltipContent("");
