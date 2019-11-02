@@ -1,13 +1,26 @@
-import React, { useEffect } from "react";
+import React from "react";
 
-export default ({ country }) => {
-  useEffect(() => {
-    console.log(country);
-  }, [country]);
+const removeKeys = ["CountryCode", "Country Name"];
 
+export default ({ countryCode, data }) => {
+  const countryData = data.find(country => country.CountryCode === countryCode);
   return (
-    <div className="content Details">
-      <h3>{country}</h3>
-    </div>
+    countryCode &&
+    countryData &&
+    countryData["Country Name"] && (
+      <div className="content Details">
+        <h3>{countryData["Country Name"]}</h3>
+        <table>
+          {Object.keys(countryData)
+            .filter(key => !removeKeys.includes(key))
+            .map(key => (
+              <tr>
+                <td>{key}</td>
+                <td>{countryData[key]}</td>
+              </tr>
+            ))}
+        </table>
+      </div>
+    )
   );
 };

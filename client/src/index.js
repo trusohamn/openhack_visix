@@ -45,7 +45,7 @@ function App() {
         />
         <Stats country={country} data={data}></Stats>
         <ReactTooltip>{content}</ReactTooltip>
-        <Details country={country} />
+        <Details countryCode={country} data={data} />
       </div>
     </div>
   );
