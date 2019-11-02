@@ -44,57 +44,60 @@ const MapChart = ({ setTooltipContent }) => {
   }, []);
 
   return (
-    <ComposableMap
-      projectionConfig={{
-        rotate: [-10, 0, 0],
-        scale: 147
-      }}
-    >
-      <ZoomableGroup>
-        <Sphere stroke="#E4E5E6" strokeWidth={0.5} />
-        <Graticule stroke="#E4E5E6" strokeWidth={0.5} />
-        {data.length > 0 && (
-          <Geographies geography={geoUrl}>
-            {({ geographies }) =>
-              geographies.map(geo => {
-                const d = data.find(s => s.ISO3 === geo.properties.ISO_A3);
-                return (
-                  <Geography
-                    key={geo.rsmKey}
-                    geography={geo}
-                    fill={
-                      d
-                        ? colorScale2D(d["corruption"], d["investment"])
-                        : "#F5F4F6"
-                    }
-                    onClick={() => {
-                      console.log(geo.properties.ABBREV);
-                    }}
-                    onMouseEnter={() => {
-                      const { NAME, POP_EST } = geo.properties;
-                      setTooltipContent(`${NAME} — ${rounded(POP_EST)}`);
-                    }}
-                    onMouseLeave={() => {
-                      setTooltipContent("");
-                    }}
-                    style={{
-                      hover: {
-                        fill: "#F53",
-                        outline: "none"
-                      },
-                      pressed: {
-                        fill: "#E42",
-                        outline: "none"
+    <>
+      <ComposableMap
+        data-tip=""
+        projectionConfig={{
+          rotate: [-10, 0, 0],
+          scale: 147
+        }}
+      >
+        <ZoomableGroup>
+          <Sphere stroke="#E4E5E6" strokeWidth={0.5} />
+          <Graticule stroke="#E4E5E6" strokeWidth={0.5} />
+          {data.length > 0 && (
+            <Geographies geography={geoUrl}>
+              {({ geographies }) =>
+                geographies.map(geo => {
+                  const d = data.find(s => s.ISO3 === geo.properties.ISO_A3);
+                  return (
+                    <Geography
+                      key={geo.rsmKey}
+                      geography={geo}
+                      fill={
+                        d
+                          ? colorScale2D(d["corruption"], d["investment"])
+                          : "#F5F4F6"
                       }
-                    }}
-                  />
-                );
-              })
-            }
-          </Geographies>
-        )}
-      </ZoomableGroup>
-    </ComposableMap>
+                      onClick={() => {
+                        console.log(geo.properties.ABBREV);
+                      }}
+                      onMouseEnter={() => {
+                        const { NAME, POP_EST } = geo.properties;
+                        setTooltipContent(`${NAME} — ${rounded(POP_EST)}`);
+                      }}
+                      onMouseLeave={() => {
+                        setTooltipContent("");
+                      }}
+                      style={{
+                        hover: {
+                          fill: "#F53",
+                          outline: "none"
+                        },
+                        pressed: {
+                          fill: "#E42",
+                          outline: "none"
+                        }
+                      }}
+                    />
+                  );
+                })
+              }
+            </Geographies>
+          )}
+        </ZoomableGroup>
+      </ComposableMap>
+    </>
   );
 };
 
