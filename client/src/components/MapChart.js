@@ -33,11 +33,10 @@ const MapChart = ({ setTooltipContent, dataset }) => {
     });
   }, [dataset]);
 
-
   return (
     <ComposableMap
       data-tip=""
-      height='450'
+      height={450}
       projectionConfig={{
         rotate: [0, 0, 0],
         scale: 140
