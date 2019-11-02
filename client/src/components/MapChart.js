@@ -73,6 +73,7 @@ const MapChart = ({
                           ? colorScale2D(d["Corruption risks"], d["investment"])
                           : "#F5F4F6"
                       }
+                      stroke="#EAEAEC"
                       onClick={() => {
                         setCountry(geo.properties.ISO_A3);
                         console.log(geo.properties.ISO_A3);
@@ -90,7 +91,7 @@ const MapChart = ({
                         setTooltipContent("");
                       }}
                       style={{
-                        default: {
+                        default: {               
                           outline: "none"
                         },
                         hover: {
