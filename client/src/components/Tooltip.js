@@ -44,7 +44,7 @@ const DataTooltip = ({ name, corruption, investment }) => {
             ))}
           </Pie>
           <text x={21} y={17} dy={8} textAnchor="middle" fill="White">
-            {corruption}
+            {Number(corruption).toFixed(2)}
           </text>
 
           <Pie
@@ -61,7 +61,7 @@ const DataTooltip = ({ name, corruption, investment }) => {
             ))}
           </Pie>
           <text x={61} y={17} dy={8} textAnchor="middle" fill="White">
-            {investment}
+            {Number(investment).toFixed(2)}
           </text>
         </PieChart>
       </div>
