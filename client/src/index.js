@@ -16,8 +16,7 @@ function App() {
   const [country, setCountry] = useState("");
   const [data, setData] = useState([]);
 
-
-  const sectors = ["public", "education", "health", "business"];
+  const sectors = ["public", "education", "health", "business", "energy"];
   return (
     <div>
       <div className="page">

@@ -25,14 +25,14 @@ const geoUrl =
 
 const fillFunction = (corruption, investment) => {
   console.log("in fillFunctin", corruption, investment);
-  return [255 * corruption, 255 - 255 * investment, 255];
+  return { R: 255 * corruption, G: 255 - 255 * investment, B: 255 };
 };
 
 const colorScale2D = (corruption, investment) => {
-  const fill_values = fillFunction(corruption, investment);
+  const color = fillFunction(corruption, investment);
 
-  console.log(corruption, investment, fill_values);
-  const hex = rgbHex(fill_values[0], fill_values[1], fill_values[2]);
+  console.log(corruption, investment, color);
+  const hex = rgbHex(color["R"], color["G"], color["B"]);
   //const hex = rgbHex(255 * corruption, 255 * investment, 255);
   return "#" + hex;
 };
@@ -46,7 +46,6 @@ const MapChart = ({
   setData
 }) => {
   useEffect(() => {
-    console.log(dataset);
     csv(`${process.env.PUBLIC_URL}/data/${dataset}`).then(data => {
       const maxFunding = Math.max(
         ...data.map(country => country["Funding USDm"])
@@ -54,6 +53,7 @@ const MapChart = ({
       data.forEach(country => {
         country.investment = country["Funding USDm"] / maxFunding;
       });
+      console.log(data);
       return setData(data);
     });
   }, [dataset]);
@@ -62,7 +62,7 @@ const MapChart = ({
     <div className="Map">
       <ComposableMap
         data-tip=""
-        height={450}
+        height={400}
         projectionConfig={{
           rotate: [0, 0, 0],
           scale: 140
