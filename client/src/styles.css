@@ -1,4 +1,4 @@
-.content{
+.content {
   margin: 0px auto;
   width: 80%;
   background: rgb(235, 235, 235);
@@ -34,22 +34,21 @@ a {
   justify-content: center;
 }
 
-.Stats{
+.Stats {
   display: flex;
-  flex-direction: row ;
+  flex-direction: row;
   justify-content: space-around;
   max-width: 500px;
 }
 
-.SingleStat{
+.SingleStat {
   font-size: 0.8em;
-  margin: 5px
+  margin: 5px;
 }
 
-.SingleStat h5{
+.SingleStat h5 {
   font-weight: bold;
   font-size: 1em;
-
 }
 
 ul {
@@ -64,7 +63,14 @@ li {
 }
 
 @media screen and (max-width: 700px) {
-  .Stats{
-    flex-direction: column ;
+  .Stats {
+    flex-direction: column;
   }
+}
+
+.Details {
+  position: absolute;
+  top: 20%;
+  padding: 5%;
+  background-color: rgba(180, 180, 180, 0.8);
 }
