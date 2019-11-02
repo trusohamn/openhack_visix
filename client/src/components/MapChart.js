@@ -24,14 +24,15 @@ const colorScale2D = (corruption, investment) => {
   return "#" + hex;
 };
 
-const MapChart = ({ setTooltipContent }) => {
+const MapChart = ({ setTooltipContent, dataset }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    csv(`/corruption.csv`).then(data => {
+    csv(`/${dataset}`).then(data => {
       setData(data);
     });
-  }, []);
+  }, [dataset]);
+
 
   return (
     <ComposableMap
