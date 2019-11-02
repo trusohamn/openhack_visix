@@ -19,7 +19,6 @@ const geoUrl =
 
 // Green investment, pink corruption, blue both <- best one so far
 const fillFunction = (corruption, investment) => {
-  console.log("in fillFunctin", corruption, investment);
   return {
     G: 255 - 255 * Number(corruption),
     B: 255 - (155 * (Number(corruption) + Number(investment))) / 2,
@@ -30,7 +29,6 @@ const fillFunction = (corruption, investment) => {
 const colorScale2D = (corruption, investment) => {
   const color = fillFunction(corruption, investment);
 
-  console.log(corruption, investment, color);
   const hex = rgbHex(color["R"], color["G"], color["B"]);
 
   return `rgb(${color["R"]}, ${color["G"]} , ${color["B"]})`;
@@ -52,7 +50,6 @@ const MapChart = ({
       data.forEach(country => {
         country.investment = country["Funding USDm"] / maxFunding;
       });
-      console.log(data);
       return setData(data);
     });
   }, [dataset]);
@@ -89,7 +86,6 @@ const MapChart = ({
                       stroke="#EAEAEC"
                       onClick={() => {
                         setCountry(geo.properties.ISO_A3);
-                        console.log(geo.properties.ISO_A3);
                       }}
                       onMouseEnter={() => {
                         setTooltipContent(

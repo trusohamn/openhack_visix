@@ -21,8 +21,6 @@ const DataTooltip = ({
   const COLORS1 = [corruption_color, "rgb(100,100,100)"];
   const COLORS2 = [investment_color, "rgb(100,100,100)"];
 
-  console.log(data_corruption);
-
   return (
     <div
       className="dataTooltip"
