@@ -5,9 +5,7 @@ const removeKeys = ["CountryCode", "Country Name"];
 export default ({ countryCode, data }) => {
   const countryData = data.find(country => country.CountryCode === countryCode);
   return (
-    countryCode &&
-    countryData &&
-    countryData["Country Name"] && (
+    (countryCode && countryData && countryData["Country Name"] && (
       <div className="content Details">
         <h3>{countryData["Country Name"]}</h3>
         <table>
@@ -21,6 +19,7 @@ export default ({ countryCode, data }) => {
             ))}
         </table>
       </div>
-    )
+    )) ||
+    null
   );
 };
