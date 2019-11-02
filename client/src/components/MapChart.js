@@ -34,7 +34,7 @@ const colorScale2D = (corruption, investment) => {
   return "#" + hex;
 };
 
-const MapChart = () => {
+const MapChart = ({ setTooltipContent }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -69,6 +69,23 @@ const MapChart = () => {
                     }
                     onClick={() => {
                       console.log(geo.properties.ABBREV);
+                    }}
+                    onMouseEnter={() => {
+                      const { NAME, POP_EST } = geo.properties;
+                      setTooltipContent(`${NAME} — ${rounded(POP_EST)}`);
+                    }}
+                    onMouseLeave={() => {
+                      setTooltipContent("");
+                    }}
+                    style={{
+                      hover: {
+                        fill: "#F53",
+                        outline: "none"
+                      },
+                      pressed: {
+                        fill: "#E42",
+                        outline: "none"
+                      }
                     }}
                   />
                 );
