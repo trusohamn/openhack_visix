@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f87002e2c8563901d7c5e9b86e14f147",
+    "revision": "853c1f6e149c2e4867b98a968796b5cc",
     "url": "/openhack_visix/index.html"
   },
   {
