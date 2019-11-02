@@ -42,7 +42,7 @@ const MapChart = ({ setTooltipContent, dataset }) => {
         scale: 140
       }}
     >
-      <ZoomableGroup>
+      <ZoomableGroup disablePanning={true} >
         <Sphere stroke="#E4E5E6" strokeWidth={0.5} />
         <Graticule stroke="#E4E5E6" strokeWidth={0.5} />
         {data.length > 0 && (
