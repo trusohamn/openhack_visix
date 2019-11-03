@@ -9,6 +9,8 @@ import {
   ZAxis
 } from "recharts";
 
+const handleClick = () => {}
+
 export default ({ data }) => {
   return (
     <div className="ScatterPlot">
@@ -44,8 +46,7 @@ export default ({ data }) => {
           unit=""
         />
         <Tooltip cursor={{ strokeDasharray: "3 3" }} />
-        <Scatter name="Corruption" data={data} fill="#8884d8">
-          {/* <LabelList dataKey="Country Name" /> */}
+        <Scatter name="Corruption" data={data} fill="#8884d8" onClick={handleClick}>
         </Scatter>
       </ScatterChart>
     </div>
