@@ -27,13 +27,15 @@ export default ({ data }) => {
           type="number"
           dataKey="investment"
           name="Relative aid"
-          unit="mln $"
+          label="Relative aid"
+          tick={false}
         />
         <YAxis
           type="number"
           dataKey="Corruption risks"
           name="Corruption"
-          unit=""
+          label={{ value: "Corruption", angle: -90 }}
+          tick={false}
         />
         <ZAxis
           type="string"
