@@ -53,8 +53,9 @@ export default ({ data, displayDetails }) => {
         displayDetails={displayDetails}
         data={lessInvested}
         label="Least aid received"
-      />
-      <ScatterPlot data={data} />
+        />
+      <ScatterPlot data={data} displayDetails={displayDetails}/>
+        
     </div>
   );
 };

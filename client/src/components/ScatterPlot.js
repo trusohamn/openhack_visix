@@ -11,7 +11,10 @@ import {
 } from "recharts";
 import { colorScale2D } from "../colortools";
 
-export default ({ data }) => {
+export default ({ data, displayDetails }) => {
+  const handleClick = e => {
+    displayDetails(e["CountryCode"]);
+  };
   return (
     <div className="ScatterPlot">
       <ScatterChart
@@ -46,7 +49,12 @@ export default ({ data }) => {
           unit=""
         />
         <Tooltip cursor={{ strokeDasharray: "3 3" }} />
-        <Scatter name="Corruption" data={data} fill="#8884d8">
+        <Scatter
+          name="Corruption"
+          data={data}
+          fill="#8884d8"
+          onClick={handleClick}
+        >
           {data.map((entry, index) => {
             const fillColor = colorScale2D(
               Number(entry["Corruption risks"]),

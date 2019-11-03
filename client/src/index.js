@@ -10,11 +10,16 @@ import Stats from "./components/Stats";
 import { Tabs, Tab } from "react-bootstrap";
 const upperFirst = string =>
   string.charAt(0).toUpperCase() + string.substring(1);
+
 function App() {
   const [content, setContent] = useState("");
   const [key, setKey] = useState("public");
   const [country, setCountry] = useState("");
   const [data, setData] = useState([]);
+
+  const displayDetails = countryCode => {
+    setCountry(countryCode);
+  };
 
   const sectors = ["public", "education", "health", "business", "energy"];
   return (
@@ -46,9 +51,7 @@ function App() {
         <Stats
           country={country}
           data={data}
-          displayDetails={countryCode => {
-            setCountry(countryCode);
-          }}
+          displayDetails={displayDetails}
         ></Stats>
         <ReactTooltip>{content}</ReactTooltip>
         <Details countryCode={country} data={data} setCountry={setCountry} />
