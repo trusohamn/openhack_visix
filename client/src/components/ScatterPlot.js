@@ -9,9 +9,11 @@ import {
   ZAxis
 } from "recharts";
 
-const handleClick = () => {}
 
-export default ({ data }) => {
+export default ({ data, displayDetails }) => {
+  const handleClick = (e) => {
+    displayDetails(e['CountryCode'])
+  }
   return (
     <div className="ScatterPlot">
       <ScatterChart
