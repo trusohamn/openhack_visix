@@ -53,6 +53,9 @@ a {
   font-size: 1em;
 }
 
+td {
+  padding-right : 18px
+}
 ul {
   list-style-type: none;
   margin: 0;
