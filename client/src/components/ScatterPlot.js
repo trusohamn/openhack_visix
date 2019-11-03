@@ -11,10 +11,28 @@ import {
 } from "recharts";
 import { colorScale2D } from "../colortools";
 
+const CustomTooltip = ({ active, payload, label }) => {
+  if (active) {
+    console.log(payload[0].payload);
+    const data = payload[0].payload;
+    return (
+      <div className="custom-tooltip">
+        <h5 className="label">{data["Country Name"]}</h5>
+        <p className="intro">
+          Corruption: {Number(data["Corruption risks"]).toFixed(2)}
+        </p>
+        <p className="desc">Aid: {Number(data["Funding USDm"]).toFixed(2)}</p>
+      </div>
+    );
+  }
+  return null;
+};
+
 export default ({ data, displayDetails }) => {
   const handleClick = e => {
     displayDetails(e["CountryCode"]);
   };
+
   return (
     <div className="ScatterPlot">
       <ScatterChart
@@ -48,7 +66,7 @@ export default ({ data, displayDetails }) => {
           name="Country Name"
           unit=""
         />
-        <Tooltip cursor={{ strokeDasharray: "3 3" }} />
+        <Tooltip content={<CustomTooltip />} />
         <Scatter
           name="Corruption"
           data={data}

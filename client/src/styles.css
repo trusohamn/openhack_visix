@@ -105,7 +105,16 @@ li {
   outline: none
 }
 
+.custom-tooltip {
+  background: rgba(255, 255, 255, 0.692);
+  border-radius: 10px;
+  padding: 5px
+}
 
+.custom-tooltip p {
+  margin: 0px;
+  padding: 0px;
+}
 
 
 
