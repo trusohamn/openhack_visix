@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/openhack_visix/precache-manifest.20f62e29f0755ad7699f8957b0d9d008.js"
+  "/openhack_visix/precache-manifest.501eab146875b25f1f3aba3a2a93a8d3.js"
 );
 
 self.addEventListener('message', (event) => {
