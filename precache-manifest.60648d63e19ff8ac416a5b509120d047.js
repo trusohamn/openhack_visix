@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6b8585b859b6426429af9950470009c6",
+    "revision": "c8bdae9acb2f0914a139f192d55e86d7",
     "url": "/openhack_visix/index.html"
   },
   {
-    "revision": "b60d72ce44c6bc873b7f",
+    "revision": "85e26e92c5474aca587f",
     "url": "/openhack_visix/static/css/2.b0bb7f2c.chunk.css"
   },
   {
-    "revision": "6ce518f8f190bdd52ac7",
+    "revision": "6b8ba7a143b10be93a1e",
     "url": "/openhack_visix/static/css/main.5838cd82.chunk.css"
   },
   {
-    "revision": "b60d72ce44c6bc873b7f",
-    "url": "/openhack_visix/static/js/2.ae625712.chunk.js"
+    "revision": "85e26e92c5474aca587f",
+    "url": "/openhack_visix/static/js/2.bc649194.chunk.js"
   },
   {
-    "revision": "6ce518f8f190bdd52ac7",
-    "url": "/openhack_visix/static/js/main.f67e0768.chunk.js"
+    "revision": "6b8ba7a143b10be93a1e",
+    "url": "/openhack_visix/static/js/main.bf6538ef.chunk.js"
   },
   {
     "revision": "2672ff0d41a4c417ec81",
