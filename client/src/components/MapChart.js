@@ -10,29 +10,12 @@ import {
   Graticule,
   Marker
 } from "react-simple-maps";
-import rgbHex from "rgb-hex";
 import Legend2d from "./Legend2d";
 import Tooltip from "./Tooltip";
+import { colorScale2D } from "../colortools";
 
 const geoUrl =
   "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
-
-// Green investment, pink corruption, blue both <- best one so far
-const fillFunction = (corruption, investment) => {
-  return {
-    G: 255 - 255 * Number(corruption),
-    B: 255 - (155 * (Number(corruption) + Number(investment))) / 2,
-    R: 255 - 255 * Number(investment)
-  };
-};
-
-const colorScale2D = (corruption, investment) => {
-  const color = fillFunction(corruption, investment);
-
-  const hex = rgbHex(color["R"], color["G"], color["B"]);
-
-  return `rgb(${color["R"]}, ${color["G"]} , ${color["B"]})`;
-};
 
 const MapChart = ({
   setTooltipContent,

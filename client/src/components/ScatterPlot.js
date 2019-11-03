@@ -6,8 +6,10 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  ZAxis
+  ZAxis,
+  Cell
 } from "recharts";
+import { colorScale2D } from "../colortools";
 
 export default ({ data }) => {
   return (
@@ -45,7 +47,13 @@ export default ({ data }) => {
         />
         <Tooltip cursor={{ strokeDasharray: "3 3" }} />
         <Scatter name="Corruption" data={data} fill="#8884d8">
-          {/* <LabelList dataKey="Country Name" /> */}
+          {data.map((entry, index) => {
+            const fillColor = colorScale2D(
+              Number(entry["Corruption risks"]),
+              Number(entry["investment"])
+            );
+            return <Cell key={`cell-${index}`} fill={fillColor} />;
+          })}
         </Scatter>
       </ScatterChart>
     </div>
