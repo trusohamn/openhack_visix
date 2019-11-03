@@ -1,6 +1,7 @@
 {
   "name": "visix",
   "version": "0.1.0",
+  "license": "MIT - Hippocratic",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",
