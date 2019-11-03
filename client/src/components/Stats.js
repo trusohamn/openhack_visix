@@ -1,4 +1,5 @@
 import React from "react";
+import ScatterPlot from "./ScatterPlot";
 
 const SingleStat = ({ data, label, displayDetails }) => {
   const name = "Country Name";
@@ -53,6 +54,7 @@ export default ({ data, displayDetails }) => {
         data={lessInvested}
         label="Least aid received"
       />
+      <ScatterPlot data={data} />
     </div>
   );
 };
