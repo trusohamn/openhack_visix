@@ -46,12 +46,12 @@ export default ({ data, displayDetails }) => {
       <SingleStat
         displayDetails={displayDetails}
         data={mostInvested}
-        label="Highest investment"
+        label="Most aid received"
       />
       <SingleStat
         displayDetails={displayDetails}
         data={lessInvested}
-        label="Lowest investment"
+        label="Least aid received"
       />
     </div>
   );

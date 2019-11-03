@@ -89,7 +89,7 @@ const SVG = ({
           textAnchor="middle"
           fontWeight="bold"
         >
-          Investment
+          Relative Aid
         </text>
       </g>
     </svg>
