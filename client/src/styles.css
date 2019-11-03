@@ -61,16 +61,26 @@ li {
   font-size: 0.8em;
   cursor: pointer;
 }
-
-@media screen and (max-width: 700px) {
-  .Stats {
-    flex-direction: column;
-  }
-}
-
 .Details {
   position: absolute;
   top: 20%;
   padding: 5%;
   background-color: rgba(180, 180, 180, 0.8);
 }
+
+
+@media screen and (max-width: 700px) {
+  .Stats {
+    flex-direction: column;
+  }
+  body {
+    margin: 0px auto;
+    width: 100vw;
+  }
+
+  .Details {
+    width: 100%
+  }
+
+}
+
