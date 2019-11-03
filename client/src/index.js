@@ -51,7 +51,7 @@ function App() {
           }}
         ></Stats>
         <ReactTooltip>{content}</ReactTooltip>
-        <Details countryCode={country} data={data} />
+        <Details countryCode={country} data={data} setCountry={setCountry} />
       </div>
     </div>
   );
