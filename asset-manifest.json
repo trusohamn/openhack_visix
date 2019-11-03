@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/openhack_visix/static/css/main.5733666e.chunk.css",
-    "main.js": "/openhack_visix/static/js/main.7487ffe7.chunk.js",
-    "main.js.map": "/openhack_visix/static/js/main.7487ffe7.chunk.js.map",
+    "main.css": "/openhack_visix/static/css/main.a4568612.chunk.css",
+    "main.js": "/openhack_visix/static/js/main.2e29f78a.chunk.js",
+    "main.js.map": "/openhack_visix/static/js/main.2e29f78a.chunk.js.map",
     "runtime-main.js": "/openhack_visix/static/js/runtime-main.c9165b19.js",
     "runtime-main.js.map": "/openhack_visix/static/js/runtime-main.c9165b19.js.map",
     "static/css/2.b0bb7f2c.chunk.css": "/openhack_visix/static/css/2.b0bb7f2c.chunk.css",
     "static/js/2.bc649194.chunk.js": "/openhack_visix/static/js/2.bc649194.chunk.js",
     "static/js/2.bc649194.chunk.js.map": "/openhack_visix/static/js/2.bc649194.chunk.js.map",
     "index.html": "/openhack_visix/index.html",
-    "precache-manifest.dd828676fcaabc0d46958755be7bca1e.js": "/openhack_visix/precache-manifest.dd828676fcaabc0d46958755be7bca1e.js",
+    "precache-manifest.970fc3faf9f32811ec18d40c519c4b4e.js": "/openhack_visix/precache-manifest.970fc3faf9f32811ec18d40c519c4b4e.js",
     "service-worker.js": "/openhack_visix/service-worker.js",
     "static/css/2.b0bb7f2c.chunk.css.map": "/openhack_visix/static/css/2.b0bb7f2c.chunk.css.map",
-    "static/css/main.5733666e.chunk.css.map": "/openhack_visix/static/css/main.5733666e.chunk.css.map"
+    "static/css/main.a4568612.chunk.css.map": "/openhack_visix/static/css/main.a4568612.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.c9165b19.js",
     "static/css/2.b0bb7f2c.chunk.css",
     "static/js/2.bc649194.chunk.js",
-    "static/css/main.5733666e.chunk.css",
-    "static/js/main.7487ffe7.chunk.js"
+    "static/css/main.a4568612.chunk.css",
+    "static/js/main.2e29f78a.chunk.js"
   ]
 }
