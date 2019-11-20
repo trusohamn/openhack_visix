@@ -11,6 +11,7 @@ import pandas as pd
 
 # Formula for relative normalization (0-1): zi=xi−min(x)/max(x)−min(x) (used in excel)
 
+# corruption data source: https://qog.pol.gu.se/data/variable-search-tool
 sectors= {
          'Education':['gcb_bed','gcb_ped'],
          'Health':['gcb_bmed','gcb_pmed'],
@@ -20,17 +21,20 @@ sectors= {
          'Public':['gcb_pngo']
          }
 
-
+# foreign aid flow data: https://stats.oecd.org/Index.aspx?DataSetCode=CRS1 
 df_variable=pd.read_excel('qog_std_cs_jan19.xlsx')
 
 one_to_five_rankings=['gcb_pmed','gcb_ped','gcb_pb','gcb_pngo']
 df_variable.rename({'cname':'Country','ccodealp':'CountryCode'}, axis=1, inplace=True)
 
+# metrics range from 1 to 5, divided by 5
 for i in one_to_five_rankings:
     df_variable[i]=df_variable[i].apply(lambda x: x/5)
+# metrics range from 1 to 100, divided by 100
 for i in ['wdi_acel', 'who_sanittot','epi_acsat','epi_ehwater','wdi_firgifttax']:
     df_variable[i]=df_variable[i].apply(lambda x: x/100)    
 
+# merge corruption data and forein aid data on columns Country and CountryCode; remove empty value
 for sector, var in sectors.items():  
     cols=['Country','CountryCode'] + sectors[sector]
     df_variable[sectors[sector]].dropna(how='all', inplace=True)
